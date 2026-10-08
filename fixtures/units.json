@@ -1,0 +1,130 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "units": {
+    "1": {
+      "symbol": "1",
+      "dimension": "dimensionless",
+      "toBase": 1
+    },
+    "kg": {
+      "symbol": "kg",
+      "dimension": "mass",
+      "toBase": 1
+    },
+    "g": {
+      "symbol": "g",
+      "dimension": "mass",
+      "toBase": 0.001
+    },
+    "t": {
+      "symbol": "t",
+      "dimension": "mass",
+      "toBase": 1000
+    },
+    "lb": {
+      "symbol": "lb",
+      "dimension": "mass",
+      "toBase": 0.45359237
+    },
+    "m": {
+      "symbol": "m",
+      "dimension": "length",
+      "toBase": 1
+    },
+    "km": {
+      "symbol": "km",
+      "dimension": "length",
+      "toBase": 1000
+    },
+    "mi": {
+      "symbol": "mi",
+      "dimension": "length",
+      "toBase": 1609.344
+    },
+    "ft": {
+      "symbol": "ft",
+      "dimension": "length",
+      "toBase": 0.3048
+    },
+    "m3": {
+      "symbol": "m3",
+      "dimension": "volume",
+      "toBase": 1
+    },
+    "L": {
+      "symbol": "L",
+      "dimension": "volume",
+      "toBase": 0.001
+    },
+    "cm3": {
+      "symbol": "cm3",
+      "dimension": "volume",
+      "toBase": 0.000001
+    },
+    "gal": {
+      "symbol": "gal",
+      "dimension": "volume",
+      "toBase": 0.00378541
+    },
+    "MJ": {
+      "symbol": "MJ",
+      "dimension": "energy",
+      "toBase": 1
+    },
+    "kWh": {
+      "symbol": "kWh",
+      "dimension": "energy",
+      "toBase": 3.6
+    },
+    "GJ": {
+      "symbol": "GJ",
+      "dimension": "energy",
+      "toBase": 1000
+    },
+    "J": {
+      "symbol": "J",
+      "dimension": "energy",
+      "toBase": 0.000001
+    },
+    "BTU": {
+      "symbol": "BTU",
+      "dimension": "energy",
+      "toBase": 0.00105506
+    },
+    "tkm": {
+      "symbol": "tkm",
+      "dimension": "transport",
+      "toBase": 1
+    },
+    "tonne-km": {
+      "symbol": "tonne-km",
+      "dimension": "transport",
+      "toBase": 1
+    },
+    "kgCO2e": {
+      "symbol": "kgCO2e",
+      "dimension": "emission",
+      "toBase": 1
+    },
+    "gCO2e": {
+      "symbol": "gCO2e",
+      "dimension": "emission",
+      "toBase": 0.001
+    },
+    "tCO2e": {
+      "symbol": "tCO2e",
+      "dimension": "emission",
+      "toBase": 1000
+    },
+    "each": {
+      "symbol": "each",
+      "dimension": "dimensionless",
+      "toBase": 1
+    },
+    "%": {
+      "symbol": "%",
+      "dimension": "dimensionless",
+      "toBase": 0.01
+    }
+  }
+}
