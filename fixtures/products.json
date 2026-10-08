@@ -1,0 +1,57 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "products": [
+    {
+      "id": "prod-cx30",
+      "name": "CX-30 low-carbon ready-mix",
+      "facilityId": "fac-harborview",
+      "declaredUnit": "1 m³"
+    },
+    {
+      "id": "prod-std40",
+      "name": "STD-40 standard ready-mix",
+      "facilityId": "fac-riverside",
+      "declaredUnit": "1 m³"
+    },
+    {
+      "id": "prod-he50",
+      "name": "HE-50 high-early-strength ready-mix",
+      "facilityId": "fac-meadowbrook",
+      "declaredUnit": "1 m³"
+    },
+    {
+      "id": "prod-eco25",
+      "name": "ECO-25 flowable fill",
+      "facilityId": "fac-harborview",
+      "declaredUnit": "1 m³"
+    }
+  ],
+  "versions": {
+    "prod-cx30": {
+      "versions": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "currentVersion": "v2"
+    },
+    "prod-std40": {
+      "versions": [
+        "v1"
+      ],
+      "currentVersion": "v1"
+    },
+    "prod-he50": {
+      "versions": [
+        "v1"
+      ],
+      "currentVersion": "v1"
+    },
+    "prod-eco25": {
+      "versions": [
+        "v1"
+      ],
+      "currentVersion": "v1"
+    }
+  }
+}
