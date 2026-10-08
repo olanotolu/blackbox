@@ -1,0 +1,20 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "facilities": [
+    {
+      "id": "fac-harborview",
+      "name": "Harborview RMX — Brooklyn NY",
+      "location": "Brooklyn, NY"
+    },
+    {
+      "id": "fac-riverside",
+      "name": "Riverside Concrete Works — Queens NY",
+      "location": "Long Island City, Queens, NY"
+    },
+    {
+      "id": "fac-meadowbrook",
+      "name": "Meadowbrook Batching — Edison NJ",
+      "location": "Edison, NJ"
+    }
+  ]
+}
