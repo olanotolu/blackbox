@@ -1,0 +1,1 @@
+{"compilerOptions":{"declaration":true,"forceConsistentCasingInFileNames":true,"module":"ESNext","moduleResolution":"Bundler","noEmit":true,"outDir":"dist","skipLibCheck":true,"strict":true,"target":"ES2022"},"include":["src","../engine/src"]}
