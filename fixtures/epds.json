@@ -1,0 +1,181 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "epdRecords": [
+    {
+      "id": "epd-hv-cx30-2021",
+      "productId": "prod-cx30",
+      "facilityId": "fac-harborview",
+      "programOperator": "SYNTHETIC-PO",
+      "verification": {
+        "status": "self_declared",
+        "body": "SYNTHETIC-VERIFIER"
+      },
+      "issueDate": "2021-10-19",
+      "expiryDate": "2026-10-19",
+      "evidence": [
+        {
+          "item": "Cement supplier EPD (current revision) — Cites cement-lca@v2019.4, validity ended 2022-01-10 — refresh to v2024.1 required.",
+          "status": "stale"
+        },
+        {
+          "item": "Plant electricity bills — trailing 12 months — CONED bills 2025-10 → 2026-09 on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Transport distance logs — Freight manifests FR-2026-99xx on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Admixture LCI / SDS — No supplier LCI on file; industry-average placeholder in use.",
+          "status": "missing"
+        },
+        {
+          "item": "SCM sourcing documentation — GGBS + fly ash mill certs on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Batch records — representative production — Latest batch record 2024-06 (mix v1); refresh with current v2 mix.",
+          "status": "stale"
+        }
+      ]
+    },
+    {
+      "id": "epd-hv-cx30-2016",
+      "productId": "prod-cx30",
+      "facilityId": "fac-harborview",
+      "programOperator": "SYNTHETIC-PO",
+      "verification": {
+        "status": "self_declared",
+        "body": "SYNTHETIC-VERIFIER"
+      },
+      "issueDate": "2016-10-19",
+      "expiryDate": "2021-10-19",
+      "evidence": [
+        {
+          "item": "Cement supplier EPD (current revision) — Superseded by the 2021 declaration.",
+          "status": "stale"
+        },
+        {
+          "item": "Plant electricity bills — trailing 12 months — 2016 billing period; superseded.",
+          "status": "stale"
+        },
+        {
+          "item": "Batch records — representative production — Superseded by the 2021 declaration.",
+          "status": "stale"
+        }
+      ]
+    },
+    {
+      "id": "epd-rv-std40-2021",
+      "productId": "prod-std40",
+      "facilityId": "fac-riverside",
+      "programOperator": "SYNTHETIC-PO",
+      "verification": {
+        "status": "self_declared",
+        "body": "SYNTHETIC-VERIFIER"
+      },
+      "issueDate": "2021-10-04",
+      "expiryDate": "2026-10-04",
+      "evidence": [
+        {
+          "item": "Cement supplier EPD (current revision) — Cites a 2021 supplier EPD; refresh to cement-lca-rv@v1.3 required.",
+          "status": "stale"
+        },
+        {
+          "item": "Plant electricity bills — trailing 12 months — CONED bills 2025-10 → 2026-09 on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Transport distance logs — No 2026 freight manifests attached.",
+          "status": "missing"
+        },
+        {
+          "item": "Batch records — representative production — Latest batch record 2023-11.",
+          "status": "stale"
+        }
+      ]
+    },
+    {
+      "id": "epd-rv-std40-2016",
+      "productId": "prod-std40",
+      "facilityId": "fac-riverside",
+      "programOperator": "SYNTHETIC-PO",
+      "verification": {
+        "status": "self_declared",
+        "body": "SYNTHETIC-VERIFIER"
+      },
+      "issueDate": "2016-10-04",
+      "expiryDate": "2021-10-04",
+      "evidence": [
+        {
+          "item": "Cement supplier EPD (current revision) — Superseded by the 2021 declaration.",
+          "status": "stale"
+        },
+        {
+          "item": "Batch records — representative production — Superseded by the 2021 declaration.",
+          "status": "stale"
+        }
+      ]
+    },
+    {
+      "id": "epd-mb-he50-2022",
+      "productId": "prod-he50",
+      "facilityId": "fac-meadowbrook",
+      "programOperator": "SYNTHETIC-PO",
+      "verification": {
+        "status": "self_declared",
+        "body": "SYNTHETIC-VERIFIER"
+      },
+      "issueDate": "2022-03-15",
+      "expiryDate": "2027-03-15",
+      "evidence": [
+        {
+          "item": "Cement supplier EPD (current revision) — cement-lca-mb@v2.0 on file, valid to 2027-08-31.",
+          "status": "ok"
+        },
+        {
+          "item": "Plant electricity bills — trailing 12 months — PSE&G bills 2025-10 → 2026-09 on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Transport distance logs — Freight manifests FR-2026-77xx on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Batch records — representative production — Latest batch record 2025-08; refresh before the 2027 renewal.",
+          "status": "stale"
+        }
+      ]
+    },
+    {
+      "id": "epd-hv-eco25-2024",
+      "productId": "prod-eco25",
+      "facilityId": "fac-harborview",
+      "programOperator": "SYNTHETIC-PO",
+      "verification": {
+        "status": "self_declared",
+        "body": "SYNTHETIC-VERIFIER"
+      },
+      "issueDate": "2024-05-01",
+      "expiryDate": "2029-04-30",
+      "evidence": [
+        {
+          "item": "Cement supplier EPD (current revision) — cement-lca@v2024.1 on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Plant electricity bills — trailing 12 months — CONED bills 2025-10 → 2026-09 on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Transport distance logs — Freight manifests FR-2026-99xx on file.",
+          "status": "ok"
+        },
+        {
+          "item": "Batch records — representative production — Batch record 2026-09 on file.",
+          "status": "ok"
+        }
+      ]
+    }
+  ]
+}
