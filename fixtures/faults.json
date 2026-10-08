@@ -1,0 +1,148 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "faultSpecs": [
+    {
+      "type": "unit_mismatch",
+      "nodeId": "cement",
+      "documentation": {
+        "title": "Incompatible unit",
+        "description": "The first edge touching the cement node gets a unit of a different dimension (mass → dimensionless).",
+        "expected": "validateGraph raises DIM-002 → detectFaults reports unit_mismatch (trustworthy: false)."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "unit_mismatch",
+        "nodeId": "batching",
+        "edgeId": "e-cement-cons",
+        "detail": "Edge \"e-cement-cons\" (consumes cement → batching): the flow \"Cement — Type IL Portland (Supplier B: Blue Harbor Cement)\" is mass; edge unit \"%\" has dimension dimensionless, expected mass.",
+        "affectedPath": [
+          "cement"
+        ],
+        "trustworthy": false
+      }
+    },
+    {
+      "type": "bad_conversion",
+      "nodeId": "admixture",
+      "documentation": {
+        "title": "Incorrect conversion",
+        "description": "The admixture lb→kg converts_to edge quantity is corrupted (×10+1), so the audit edge disagrees with the unit table.",
+        "expected": "validateGraph raises CNV-001 → detectFaults reports bad_conversion (trustworthy: false)."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "bad_conversion",
+        "nodeId": "f_admixture",
+        "edgeId": "e-admixture-conv",
+        "detail": "Edge \"e-admixture-conv\": bad conversion — \"Admixture — polycarboxylate superplasticizer\" is 4.8502 lb (= 2.200013712974 kg in base units) but the edge claims 23.00013712974 kg (= 23.00013712974 kg).",
+        "affectedPath": [
+          "admixture",
+          "f_admixture"
+        ],
+        "trustworthy": false
+      }
+    },
+    {
+      "type": "missing_input",
+      "nodeId": "admixture",
+      "documentation": {
+        "title": "Missing input source",
+        "description": "The admixture node's quantity is deleted — its input data vanishes while the factor remains.",
+        "expected": "validateGraph raises QTY-001 → detectFaults reports missing_input (trustworthy: false)."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "missing_input",
+        "nodeId": "admixture",
+        "detail": "Node \"Admixture — polycarboxylate superplasticizer\" (admixture, kind material_input) has no quantity — its input is missing.",
+        "affectedPath": [
+          "admixture"
+        ],
+        "trustworthy": false
+      }
+    },
+    {
+      "type": "duplicate_contribution",
+      "nodeId": "f_admixture",
+      "documentation": {
+        "title": "Duplicated contribution",
+        "description": "The first applies_factor edge (admixture) is wired a second time — its contribution is double-counted.",
+        "expected": "detectFaults reports duplicate_contribution (trustworthy: false); GWP rises by one admixture contribution."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "duplicate_contribution",
+        "nodeId": "gwp",
+        "edgeId": "e-admixture-app__dup",
+        "detail": "Duplicate contribution: \"EF — Admixture — polycarboxylate superplasticizer\" is wired into \"GWP\" twice (edges \"e-admixture-app\", \"e-admixture-app__dup\") — its contribution is double-counted.",
+        "affectedPath": [
+          "admixture",
+          "f_admixture"
+        ],
+        "trustworthy": false
+      }
+    },
+    {
+      "type": "expired_reference",
+      "nodeId": "f_cement",
+      "documentation": {
+        "title": "Expired data reference",
+        "description": "The cement factor node's dataset version is suffixed '-bogus', making it unresolvable (treated as expired).",
+        "expected": "detectFaults reports expired_reference (trustworthy: false)."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "expired_reference",
+        "nodeId": "f_cement",
+        "detail": "Node \"EF — Cement — Type IL Portland (Supplier B: Blue Harbor Cement)\" (f_cement) references unknown dataset \"cement-lca@v2024.1-bogus\" — the factor cannot be verified and is treated as expired.",
+        "affectedPath": [
+          "cement",
+          "f_cement"
+        ],
+        "trustworthy": false
+      }
+    },
+    {
+      "type": "cycle",
+      "nodeId": "gwp",
+      "documentation": {
+        "title": "Dependency cycle",
+        "description": "A converts_to back-edge is added from the batching process to the admixture flow — a physical impossibility.",
+        "expected": "validateGraph raises CYC-001 → detectFaults reports cycle (trustworthy: false); evaluation refuses."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "cycle",
+        "nodeId": "batching",
+        "detail": "Dependency cycle detected: batching → admixture → batching. Evaluation cannot terminate; no result is computable.",
+        "affectedPath": [
+          "batching",
+          "admixture",
+          "batching"
+        ],
+        "trustworthy": false
+      }
+    },
+    {
+      "type": "suspicious_value",
+      "nodeId": "f_cement",
+      "documentation": {
+        "title": "Suspicious silent change",
+        "description": "The cement factor is scaled ×100 with no dataset change — trips the dominance heuristic.",
+        "expected": "detectFaults reports suspicious_value (trustworthy: true — flagged with a warning, still presentable)."
+      },
+      "targetGraph": "graph-prod-cx30",
+      "detected": {
+        "type": "suspicious_value",
+        "nodeId": "f_cement",
+        "edgeId": "e-cement-app",
+        "detail": "Suspicious value: \"EF — Cement — Type IL Portland (Supplier B: Blue Harbor Cement)\" contributes 11788.00 kgCO2e, more than 10× the median contribution (3.78 kgCO2e). Flagged for human review (heuristic threshold, not proof of error).",
+        "affectedPath": [
+          "cement",
+          "f_cement"
+        ],
+        "trustworthy": true
+      }
+    }
+  ]
+}
