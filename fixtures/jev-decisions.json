@@ -1,0 +1,87 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "illustrative": true,
+  "note": "Example bounded-judgment records for the Jev integration agent. Produced by the deterministic fallback, clearly labeled — not model output.",
+  "decisions": [
+    {
+      "id": "jevdec-001",
+      "workflow": "anomaly_triage",
+      "subject": {
+        "faultType": "suspicious_value",
+        "nodeId": "f_cement"
+      },
+      "permitted": {
+        "taxonomy": [
+          "data_entry_slip",
+          "unattributed_edit",
+          "real_process_change",
+          "dataset_error"
+        ],
+        "queues": [
+          "data_steward",
+          "engineering_review",
+          "supplier_followup"
+        ],
+        "urgencies": [
+          "urgent",
+          "routine",
+          "low"
+        ]
+      },
+      "selected": {
+        "taxonomy": "data_entry_slip",
+        "queue": "data_steward",
+        "urgency": "urgent"
+      },
+      "evidenceConsidered": [
+        "detected fault suspicious_value on node 'f_cement' (snapshot of CX-30 v2)",
+        "emission factor moved 0.842 → 84.2 (exactly 100x): classic decimal-slip signature",
+        "dataset still cement-lca@v2024.1 with no version bump and no change record",
+        "no supporting evidence of a real process change (same supplier, same mill cert)"
+      ],
+      "rationale": "Illustrative deterministic-fallback decision: an exact 100x move with no dataset version bump matches 'data_entry_slip' better than a real process change (no supporting evidence) or dataset error (the cited release is valid). Routed to the data steward urgently because downstream EPD evidence cites this factor. The deterministic detector already flagged the value; this judgment only prioritizes the human review.",
+      "fallback": true,
+      "at": "2026-10-07T19:35:00Z"
+    },
+    {
+      "id": "jevdec-002",
+      "workflow": "anomaly_triage",
+      "subject": {
+        "faultType": "expired_reference",
+        "nodeId": "f_cement"
+      },
+      "permitted": {
+        "taxonomy": [
+          "data_entry_slip",
+          "unattributed_edit",
+          "real_process_change",
+          "dataset_error"
+        ],
+        "queues": [
+          "data_steward",
+          "engineering_review",
+          "supplier_followup"
+        ],
+        "urgencies": [
+          "urgent",
+          "routine",
+          "low"
+        ]
+      },
+      "selected": {
+        "taxonomy": "dataset_error",
+        "queue": "data_steward",
+        "urgency": "routine"
+      },
+      "evidenceConsidered": [
+        "detected fault expired_reference on node 'f_cement' (snapshot of CX-30 v2)",
+        "cement-lca@v2019.4 validTo 2022-01-10 is before snapshot asOf 2026-10-07",
+        "current release cement-lca@v2024.1 is valid until 2029-01-14",
+        "no EPD in the October 2026 expiration wave cites this node revision"
+      ],
+      "rationale": "Illustrative deterministic-fallback decision: the reference pins a superseded dataset release, so 'dataset_error' is the right taxonomy and the deterministic fix is re-pinning to the current release. Routine urgency: nothing in the October expiration wave depends on this node revision.",
+      "fallback": true,
+      "at": "2026-10-07T19:36:00Z"
+    }
+  ]
+}
