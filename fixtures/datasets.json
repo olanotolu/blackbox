@@ -1,0 +1,117 @@
+{
+  "_header": "SYNTHETIC — invented for demonstration (2026-10-07). Not real manufacturer data.",
+  "datasets": [
+    {
+      "id": "cement-lca",
+      "name": "Cement LCA — legacy release (superseded)",
+      "version": "v2019.4",
+      "validFrom": "2019-04-01",
+      "validTo": "2022-01-10",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "cement-lca",
+      "name": "Harbor Cement Works — Portland cement EPD (Supplier A)",
+      "version": "v2023.1",
+      "validFrom": "2023-02-01",
+      "validTo": "2028-01-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "cement-lca",
+      "name": "Blue Harbor Cement — Type IL EPD (Supplier B)",
+      "version": "v2024.1",
+      "validFrom": "2024-01-15",
+      "validTo": "2029-01-14",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "cement-lca-rv",
+      "name": "Riverside Cement Terminal — Portland cement EPD",
+      "version": "v1.3",
+      "validFrom": "2023-06-01",
+      "validTo": "2028-05-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "cement-lca-mb",
+      "name": "Meadowbrook Cement Co. — Portland cement EPD",
+      "version": "v2.0",
+      "validFrom": "2022-09-01",
+      "validTo": "2027-08-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "scm-lci",
+      "name": "Regional SCM LCI — GGBS, fly ash, silica fume",
+      "version": "v3.0",
+      "validFrom": "2022-06-01",
+      "validTo": "2027-05-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "agg-lci",
+      "name": "NY Metro aggregates LCI — sand & gravel",
+      "version": "v2.0",
+      "validFrom": "2024-03-01",
+      "validTo": "2029-02-28",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "water-lci",
+      "name": "Municipal water supply LCI",
+      "version": "v1.0",
+      "validFrom": "2021-01-01",
+      "validTo": "2031-01-01",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "admix-lci",
+      "name": "Admixture industry-average LCI",
+      "version": "v2.2",
+      "validFrom": "2023-09-01",
+      "validTo": "2028-08-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "egrid-ny",
+      "name": "eGRID NY subregion factors (2021 data year)",
+      "version": "v2021",
+      "validFrom": "2022-01-01",
+      "validTo": "2024-12-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "egrid-ny",
+      "name": "eGRID NY subregion factors (2023 data year)",
+      "version": "v2023",
+      "validFrom": "2024-01-01",
+      "validTo": "2027-12-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "green-tariff",
+      "name": "Harborview Green Tariff — residual-mix disclosure",
+      "version": "v1.0",
+      "validFrom": "2026-01-01",
+      "validTo": "2027-12-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "fuel-lci",
+      "name": "Fuel combustion factors — diesel (tailpipe + upstream)",
+      "version": "v2024",
+      "validFrom": "2024-01-01",
+      "validTo": "2029-12-31",
+      "publisher": "SYNTHETIC"
+    },
+    {
+      "id": "freight-lci",
+      "name": "Road freight factors — bulk & mixer trucks",
+      "version": "v2023",
+      "validFrom": "2023-01-01",
+      "validTo": "2028-12-31",
+      "publisher": "SYNTHETIC"
+    }
+  ]
+}
